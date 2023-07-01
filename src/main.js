@@ -1,11 +1,27 @@
 import { createApp, defineAsyncComponent } from 'vue';
 import App from './App.vue';
 
+// import { createRouter, createWebHashHistory } from 'vue-router';
+// import buscador from '../src/components/view/buscador';
+// import contratar from '../src/components/view/contratar';
+// import detect_object from '../src/components/view/detect-object';
+
 const API = 'https://api.github.com/users/';
 
 const requestmaxtime = 3000;
 
-createApp(App, {
+// const routes = [
+//   { path: '/buscadores', component: buscador },
+//   { path: '/detect-object', component: detect_object },
+//   { path: '/contratar', component: contratar },
+// ];
+
+// const Router = createRouter({
+//   history: createWebHashHistory(),
+//   routes,
+// });
+
+const mountedApp = createApp(App, {
   data() {
     return {
       search: null,
@@ -141,6 +157,8 @@ createApp(App, {
       }
     },
   },
-}).mount('#app');
+});
 
-app.use(routes);
+// mountedApp.use(Router);
+
+mountedApp.mount('#app');

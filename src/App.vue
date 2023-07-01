@@ -1,4 +1,5 @@
 <template>
+
   <div class="app">
     <div class="titulo">
       <h3>Bienvenidos</h3>
@@ -46,7 +47,7 @@
       </p>
 
       <div class="enlace">
-        <a href="./components/view/buscadores.vue">Visitar pagina</a>
+        <router-link to="buscador"></router-link>
       </div>
     </div>
 
@@ -73,7 +74,7 @@
       </ul>
 
       <div class="enlace">
-        <a href="./components/view/detect-object.vue">Visitar pagina</a>
+        <router-link to="detect_object"></router-link>
       </div>
     </div>
   </div>
@@ -196,7 +197,6 @@ body {
   .info-yo {
     margin: 20px;
   }
-
 
   .info-yo,
   .buscadores,
